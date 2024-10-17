@@ -1,3 +1,4 @@
+import type { LinksFunction } from "@remix-run/node";
 import {
   Links,
   Meta,
@@ -5,8 +6,6 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-
-import type { LinksFunction } from "@remix-run/node";
 
 import styles from "./index.css?url";
 
