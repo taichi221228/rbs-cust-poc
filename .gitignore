@@ -1,9 +1,24 @@
-node_modules
+# dev
+styled-system/
+styled-system-studio/
 
-/.cache
-/build
+# build
+build/
+
+# deps
+node_modules/
+
+# cache
+.cache/
+
+# env
 .env
+.env.production
 
-## Panda
-styled-system
-styled-system-studio
+# logs
+logs/
+*.log
+pnpm-debug.log*
+
+# misc
+.DS_Store
