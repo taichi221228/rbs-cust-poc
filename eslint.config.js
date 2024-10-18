@@ -19,6 +19,7 @@ export default defineConfig(
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
     rules: {
+      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
       "@typescript-eslint/no-unused-vars": [
         "error",
         { argsIgnorePattern: "^_" },
