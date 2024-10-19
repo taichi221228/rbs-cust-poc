@@ -24,14 +24,7 @@ export const importConfigs = [
         "error",
         {
           alphabetize: { order: "asc" },
-          groups: [
-            "builtin",
-            "external",
-            "internal",
-            "index",
-            "parent",
-            "sibling",
-          ],
+          groups: ["builtin", "external", "internal", "parent", "sibling"],
           "newlines-between": "always",
           pathGroups: [
             {
@@ -49,7 +42,7 @@ export const importConfigs = [
               pattern: "styled-system/**",
               position: "before",
             },
-            { group: "index", pattern: "~/**" },
+            { group: "internal", pattern: "~/**" },
             { group: "parent", pattern: "../**" },
             { group: "sibling", pattern: "./**" },
           ],
