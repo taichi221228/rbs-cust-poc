@@ -29,13 +29,13 @@ export const importConfigs = [
           pathGroups: [
             {
               group: "builtin",
-              pattern: "@remix-run/**",
+              pattern: "react?(-*){,/**}",
               position: "after",
             },
             {
-              group: "external",
-              pattern: "react?(-*){,/**}",
-              position: "before",
+              group: "builtin",
+              pattern: "@remix-run/**",
+              position: "after",
             },
             {
               group: "external",
