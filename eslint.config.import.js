@@ -62,6 +62,7 @@ export const importConfigs = [
               pattern: "~/hooks/**",
               position: "before",
             },
+            { group: "internal", pattern: "~/**" },
             { group: "parent", pattern: "../**" },
             { group: "sibling", pattern: "./**" },
           ],
