@@ -42,7 +42,26 @@ export const importConfigs = [
               pattern: "styled-system/**",
               position: "before",
             },
-            { group: "internal", pattern: "~/**" },
+            {
+              group: "internal",
+              pattern: "~/constants/**",
+              position: "before",
+            },
+            {
+              group: "internal",
+              pattern: "~/routes/**",
+              position: "before",
+            },
+            {
+              group: "internal",
+              pattern: "~/components/**",
+              position: "before",
+            },
+            {
+              group: "internal",
+              pattern: "~/hooks/**",
+              position: "before",
+            },
             { group: "parent", pattern: "../**" },
             { group: "sibling", pattern: "./**" },
           ],
