@@ -12,7 +12,7 @@
     "format": "prettier --ignore-path .gitignore . --write",
     "format.check": "prettier --ignore-path .gitignore . --check",
     "typecheck": "tsc",
-    "prepare": "panda codegen"
+    "prepare": "husky & panda codegen"
   },
   "dependencies": {
     "@remix-run/node": "^2.13.1",
