@@ -8,6 +8,7 @@ import { isbot } from "isbot";
 
 const ABORT_DELAY = 5_000;
 
+/** @private */
 export default function handleRequest(
   request: Request,
   responseStatusCode: number,
@@ -62,13 +63,11 @@ function handleBotRequest(
           pipe(body);
         },
         onShellError(error: unknown) {
+          // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
           reject(error);
         },
         onError(error: unknown) {
           responseStatusCode = 500;
-          // Log streaming rendering errors from inside the shell.  Don't log
-          // errors encountered during initial shell rendering since they'll
-          // reject and get logged in handleDocumentRequest.
           if (shellRendered) {
             console.error(error);
           }
@@ -112,6 +111,7 @@ function handleBrowserRequest(
           pipe(body);
         },
         onShellError(error: unknown) {
+          // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
           reject(error);
         },
         onError(error: unknown) {

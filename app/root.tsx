@@ -11,8 +11,10 @@ import type { ReactNode } from "react";
 
 import styles from "~/index.css?url";
 
+/** @private */
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
+/** @private */
 export function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -31,6 +33,7 @@ export function Layout({ children }: { children: ReactNode }) {
   );
 }
 
+/** @private */
 export default function App() {
   return <Outlet />;
 }

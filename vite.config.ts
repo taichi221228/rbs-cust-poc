@@ -9,6 +9,7 @@ declare module "@remix-run/node" {
   }
 }
 
+/** @private */
 export default defineConfig({
   plugins: [
     remix({

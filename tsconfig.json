@@ -1,15 +1,9 @@
 {
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/.server/**/*.ts",
-    "**/.server/**/*.tsx",
-    "**/.client/**/*.ts",
-    "**/.client/**/*.tsx"
-  ],
+  "include": ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": ["@remix-run/node", "vite/client"],
+    "plugins": [{ "name": "eslint-plugin-import-access" }],
     "isolatedModules": true,
     "esModuleInterop": true,
     "verbatimModuleSyntax": true,
@@ -24,9 +18,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
-    "paths": {
-      "~/*": ["./app/*"]
-    },
+    "paths": { "~/*": ["./app/*"] },
     "noEmit": true
   }
 }

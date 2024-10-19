@@ -7,8 +7,21 @@ import { importConfigs } from "./eslint.config.import.js";
 import { nodeConfigs } from "./eslint.config.node.js";
 import { reactConfigs } from "./eslint.config.react.js";
 
+/** @private */
+// HACK: Suppress TypeScript errors due to incompatibility between `eslint-plugin-import-access` and `tsc` when using `checkJS`.
+// @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment
 export default defineConfig(
-  ...configs.recommended,
+  ...configs.recommendedTypeChecked,
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+  // HACK: This is not type-compatible with `Config`.
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument,@typescript-eslint/no-unsafe-member-access
   eslint.configs.recommended,
   createGitignoreConfig(),
   {
@@ -25,7 +38,6 @@ export default defineConfig(
         { argsIgnorePattern: "^_" },
       ],
     },
-    ignores: ["!**/.server", "!**/.client"],
   },
   ...importConfigs,
   ...reactConfigs,

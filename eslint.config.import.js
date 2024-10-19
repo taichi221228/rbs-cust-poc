@@ -1,8 +1,16 @@
+/* HACK: `@types/eslint-plugin-import` is not found
+ * @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment */
 import importPlugin from "eslint-plugin-import";
+import importAccessPlugin from "eslint-plugin-import-access/flat-config";
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
+/**
+ * @package
+ * @type {import("eslint").Linter.Config[]}
+ */
 export const importConfigs = [
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   importPlugin.flatConfigs.recommended,
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   importPlugin.flatConfigs.typescript,
   {
     settings: {
@@ -47,6 +55,20 @@ export const importConfigs = [
           ],
           distinctGroup: false,
           pathGroupsExcludedImportTypes: [],
+        },
+      ],
+    },
+  },
+  {
+    plugins: { "import-access": importAccessPlugin },
+    rules: {
+      "import-access/jsdoc": [
+        "error",
+        {
+          indexLoophole: true,
+          filenameLoophole: true,
+          defaultImportability: "public",
+          treatSelfReferenceAs: "external",
         },
       ],
     },

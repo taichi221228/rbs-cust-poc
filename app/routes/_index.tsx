@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 
+/** @private */
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
@@ -7,6 +8,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+/** @private */
 export default function Index() {
   return <h1>Top Page</h1>;
 }
