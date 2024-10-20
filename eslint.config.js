@@ -7,10 +7,12 @@ import { importConfigs } from "./eslint.config.import.js";
 import { nodeConfigs } from "./eslint.config.node.js";
 import { reactConfigs } from "./eslint.config.react.js";
 
-/** @private */
-// HACK: Suppress TypeScript errors due to incompatibility between `eslint-plugin-import-access` and `tsc` when using `checkJS`.
-// @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment
-export default defineConfig(
+const ignoreConfig = createGitignoreConfig();
+
+const jsConfig = eslint.configs.recommended;
+
+/** @type import("typescript-eslint").ConfigWithExtends[] */
+const tsConfigs = [
   ...configs.recommendedTypeChecked,
   {
     languageOptions: {
@@ -20,10 +22,16 @@ export default defineConfig(
       },
     },
   },
-  // HACK: This is not type-compatible with `Config`.
+];
+
+/** @private */
+// HACK: Suppress TypeScript errors due to incompatibility between `eslint-plugin-import-access` and `tsc` when using `checkJS`.
+// @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment
+export default defineConfig(
+  ...tsConfigs,
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument,@typescript-eslint/no-unsafe-member-access
-  eslint.configs.recommended,
-  createGitignoreConfig(),
+  jsConfig,
+  ignoreConfig,
   {
     languageOptions: {
       globals: { ...globals.browser, ...globals.commonjs },
