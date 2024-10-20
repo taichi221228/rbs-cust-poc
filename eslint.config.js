@@ -53,6 +53,6 @@ export default defineConfig(
   ...tsConfigs,
   basicConfig,
   ...importConfigs,
-  ...reactConfigs,
   ...nodeConfigs,
+  ...reactConfigs,
 );
