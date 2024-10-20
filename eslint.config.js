@@ -29,7 +29,6 @@ const tsConfigs = [
 // @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment
 export default defineConfig(
   ...tsConfigs,
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument,@typescript-eslint/no-unsafe-member-access
   jsConfig,
   ignoreConfig,
   {
