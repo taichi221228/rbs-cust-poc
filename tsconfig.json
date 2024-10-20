@@ -1,5 +1,15 @@
 {
-  "include": ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx"],
+  "include": [
+    "**/*.js",
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.ts",
+    "**/*.jts",
+    "**/*.mts",
+    "**/*.jsx",
+    "**/*.tsx"
+  ],
+  "exclude": ["styled-system/"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": ["@remix-run/node", "vite/client"],
