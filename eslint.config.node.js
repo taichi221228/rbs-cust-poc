@@ -13,8 +13,6 @@ export const nodeConfigs = [
       "postcss.config.js",
       "vite.config.ts",
     ],
-    languageOptions: {
-      globals: { ...globals.node },
-    },
+    languageOptions: { globals: { ...globals.node } },
   },
 ];
