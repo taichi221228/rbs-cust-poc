@@ -9,7 +9,11 @@ import { reactConfigs } from "./eslint.config.react.js";
 
 const ignoreConfig = createGitignoreConfig();
 
-const jsConfig = eslint.configs.recommended;
+/** @type import("eslint").Linter.Config */
+const jsConfig = {
+  ...eslint.configs.recommended,
+  rules: { "no-unused-vars": ["error", { argsIgnorePattern: "^_" }] },
+};
 
 /** @type import("typescript-eslint").ConfigWithExtends[] */
 const tsConfigs = [
@@ -21,8 +25,24 @@ const tsConfigs = [
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_" },
+      ],
+    },
   },
 ];
+
+/** @type import("eslint").Linter.Config */
+const basicConfig = {
+  languageOptions: {
+    globals: { ...globals.browser, ...globals.commonjs },
+    ecmaVersion: "latest",
+    sourceType: "module",
+    parserOptions: { ecmaFeatures: { jsx: true } },
+  },
+};
 
 /** @private */
 // HACK: Suppress TypeScript errors due to incompatibility between `eslint-plugin-import-access` and `tsc` when using `checkJS`.
@@ -31,21 +51,7 @@ export default defineConfig(
   ignoreConfig,
   jsConfig,
   ...tsConfigs,
-  {
-    languageOptions: {
-      globals: { ...globals.browser, ...globals.commonjs },
-      ecmaVersion: "latest",
-      sourceType: "module",
-      parserOptions: { ecmaFeatures: { jsx: true } },
-    },
-    rules: {
-      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        { argsIgnorePattern: "^_" },
-      ],
-    },
-  },
+  basicConfig,
   ...importConfigs,
   ...reactConfigs,
   ...nodeConfigs,
