@@ -16,6 +16,12 @@ importers:
       "@remix-run/serve":
         specifier: ^2.13.1
         version: 2.13.1(typescript@5.6.3)
+      hono:
+        specifier: ^4.6.5
+        version: 4.6.5
+      hono-remix-adapter:
+        specifier: ^0.3.0
+        version: 0.3.0(@cloudflare/workers-types@4.20241018.0)(hono@4.6.5)(typescript@5.6.3)
       isbot:
         specifier: ^4.1.0
         version: 4.4.0
@@ -499,6 +505,18 @@ packages:
       }
     bundledDependencies:
       - is-unicode-supported
+
+  "@cloudflare/kv-asset-handler@0.1.3":
+    resolution:
+      {
+        integrity: sha512-FNcunDuTmEfQTLRLtA6zz+buIXUHj1soPvSWzzQFBC+n2lsy+CGf/NIrR3SEPCmsVNQj70/Jx2lViCpq+09YpQ==,
+      }
+
+  "@cloudflare/workers-types@4.20241018.0":
+    resolution:
+      {
+        integrity: sha512-gGWumpaaqnjN/G6SI7CZQ13G4SpIUV+EM8QqvuN2D3cGDF6mKIm+ov7H4x7V/c+AdY90v0FCc8B5nmEEt90MvQ==,
+      }
 
   "@commitlint/cli@19.5.0":
     resolution:
@@ -1305,6 +1323,31 @@ packages:
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
 
+  "@hono/node-server@1.13.2":
+    resolution:
+      {
+        integrity: sha512-0w8nEmAyx0Ul0CQp8BL2VtAG4YVdpzXd/mvvM+l0G5Oq22pUyHS+KeFFPSY+czLOF5NAiV3MUNPD1n14Ol5svg==,
+      }
+    engines: { node: ">=18.14.1" }
+    peerDependencies:
+      hono: ^4
+
+  "@hono/vite-dev-server@0.16.0":
+    resolution:
+      {
+        integrity: sha512-zGPaYY7DyDr33id677fUuaPiV2qQJoPrxv+nrcLc7g8M9PkcvlV8kO2XRkrwZT64rUSBxyWOuGN3vEIFiH9l0w==,
+      }
+    engines: { node: ">=18.14.1" }
+    peerDependencies:
+      hono: "*"
+      miniflare: "*"
+      wrangler: "*"
+    peerDependenciesMeta:
+      miniflare:
+        optional: true
+      wrangler:
+        optional: true
+
   "@humanwhocodes/config-array@0.13.0":
     resolution:
       {
@@ -1532,6 +1575,19 @@ packages:
         integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==,
       }
     engines: { node: ">=14" }
+
+  "@remix-run/cloudflare@2.13.1":
+    resolution:
+      {
+        integrity: sha512-+Xiy2ypFIm+IxNiPuXQzIfW/3RWLT5i1ZrgLsc/cMb4dp2BK7/o+iqTYwXze0t4XSPd5KuZn+yWquOwZhfg30g==,
+      }
+    engines: { node: ">=18.0.0" }
+    peerDependencies:
+      "@cloudflare/workers-types": ^4.0.0
+      typescript: ^5.1.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   "@remix-run/dev@2.13.1":
     resolution:
@@ -3979,6 +4035,22 @@ packages:
         integrity: sha512-nAxA0v8+vXSBDt3AnRUNjyRIQ0rD+ntpbAp4LnPkumc5M9yUbSMa4XDU9Q6etY4f1Wp4bNgvc1yjiZtsTTrSng==,
       }
 
+  hono-remix-adapter@0.3.0:
+    resolution:
+      {
+        integrity: sha512-LiSI4gOYl7ZSwGSIu2w72ujxG+87Xa/w0dkZdX0AKef5VFBJ8WtkUb4hoNkgl50QsSJbShC99qKFAKy0sfwUDw==,
+      }
+    engines: { node: ">=18.0.0" }
+    peerDependencies:
+      hono: "*"
+
+  hono@4.6.5:
+    resolution:
+      {
+        integrity: sha512-qsmN3V5fgtwdKARGLgwwHvcdLKursMd+YOt69eGpl1dUCJb8mCd7hZfyZnBYjxCegBG7qkJRQRUy2oO25yHcyQ==,
+      }
+    engines: { node: ">=16.9.0" }
+
   hookable@5.5.3:
     resolution:
       {
@@ -5205,6 +5277,14 @@ packages:
     engines: { node: ">=4" }
     hasBin: true
 
+  mime@2.6.0:
+    resolution:
+      {
+        integrity: sha512-USPkMeET31rOMiarsBNIHZKLGgvKc/LrjofAnBlOttf5ajRvqiRA8QsenbcooctK6d6Ts6aqZXBA+XbkKthiQg==,
+      }
+    engines: { node: ">=4.0.0" }
+    hasBin: true
+
   mimic-fn@2.1.0:
     resolution:
       {
@@ -5980,6 +6060,13 @@ packages:
     engines: { node: ">=14" }
     hasBin: true
 
+  pretty-cache-header@1.0.0:
+    resolution:
+      {
+        integrity: sha512-xtXazslu25CdnGnUkByU1RoOjK55TqwatJkjjJLg5ZAdz2Lngko/mmaUgeET36P2GMlNwh3fdM7FWBO717pNcw==,
+      }
+    engines: { node: ">=12.13" }
+
   pretty-ms@7.0.1:
     resolution:
       {
@@ -6206,6 +6293,26 @@ packages:
       {
         integrity: sha512-EFmR5zppdBp0WQeDVZ/b66CWJipB2q2VLNFMabzDSGR66Z2fQii83G5gTBbgGEnEEA0QRussvrFHxk1HWGJskw==,
       }
+
+  remix-hono@0.0.16:
+    resolution:
+      {
+        integrity: sha512-IPooI2E0eSFRV9wAgTzpsklSoOyij6Nsk6ANIugGhD9vYlovbYb2BT+siz++sLzWseZSPEtIzx/LBel203jBfQ==,
+      }
+    peerDependencies:
+      "@remix-run/cloudflare": ^2.0.0
+      i18next: ^23.0.0
+      remix-i18next: ^6.0.0
+      zod: ^3.0.0
+    peerDependenciesMeta:
+      "@remix-run/cloudflare":
+        optional: true
+      i18next:
+        optional: true
+      remix-i18next:
+        optional: true
+      zod:
+        optional: true
 
   require-directory@2.1.1:
     resolution:
@@ -6746,6 +6853,13 @@ packages:
       {
         integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==,
       }
+
+  timestring@6.0.0:
+    resolution:
+      {
+        integrity: sha512-wMctrWD2HZZLuIlchlkE2dfXJh7J2KDI9Dwl+2abPYg0mswQHfOAyQW3jJg1pY5VfttSINZuKcXoB3FGypVklA==,
+      }
+    engines: { node: ">=8" }
 
   tinyexec@0.3.1:
     resolution:
@@ -7665,6 +7779,12 @@ snapshots:
       picocolors: 1.1.1
       sisteransi: 1.0.5
 
+  "@cloudflare/kv-asset-handler@0.1.3":
+    dependencies:
+      mime: 2.6.0
+
+  "@cloudflare/workers-types@4.20241018.0": {}
+
   "@commitlint/cli@19.5.0(@types/node@22.7.6)(typescript@5.6.3)":
     dependencies:
       "@commitlint/format": 19.5.0
@@ -8020,6 +8140,16 @@ snapshots:
 
   "@eslint/js@9.12.0": {}
 
+  "@hono/node-server@1.13.2(hono@4.6.5)":
+    dependencies:
+      hono: 4.6.5
+
+  "@hono/vite-dev-server@0.16.0(hono@4.6.5)":
+    dependencies:
+      "@hono/node-server": 1.13.2(hono@4.6.5)
+      hono: 4.6.5
+      minimatch: 9.0.5
+
   "@humanwhocodes/config-array@0.13.0":
     dependencies:
       "@humanwhocodes/object-schema": 2.0.3
@@ -8291,6 +8421,14 @@ snapshots:
 
   "@pkgjs/parseargs@0.11.0":
     optional: true
+
+  "@remix-run/cloudflare@2.13.1(@cloudflare/workers-types@4.20241018.0)(typescript@5.6.3)":
+    dependencies:
+      "@cloudflare/kv-asset-handler": 0.1.3
+      "@cloudflare/workers-types": 4.20241018.0
+      "@remix-run/server-runtime": 2.13.1(typescript@5.6.3)
+    optionalDependencies:
+      typescript: 5.6.3
 
   "@remix-run/dev@2.13.1(@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(@remix-run/serve@2.13.1(typescript@5.6.3))(@types/node@22.7.6)(lightningcss@1.25.1)(typescript@5.6.3)(vite@5.4.9(@types/node@22.7.6)(lightningcss@1.25.1))":
     dependencies:
@@ -10174,6 +10312,23 @@ snapshots:
 
   hast-util-whitespace@2.0.1: {}
 
+  hono-remix-adapter@0.3.0(@cloudflare/workers-types@4.20241018.0)(hono@4.6.5)(typescript@5.6.3):
+    dependencies:
+      "@hono/vite-dev-server": 0.16.0(hono@4.6.5)
+      "@remix-run/cloudflare": 2.13.1(@cloudflare/workers-types@4.20241018.0)(typescript@5.6.3)
+      hono: 4.6.5
+      remix-hono: 0.0.16(@remix-run/cloudflare@2.13.1(@cloudflare/workers-types@4.20241018.0)(typescript@5.6.3))(typescript@5.6.3)
+    transitivePeerDependencies:
+      - "@cloudflare/workers-types"
+      - i18next
+      - miniflare
+      - remix-i18next
+      - typescript
+      - wrangler
+      - zod
+
+  hono@4.6.5: {}
+
   hookable@5.5.3: {}
 
   hosted-git-info@6.1.1:
@@ -10936,6 +11091,8 @@ snapshots:
 
   mime@1.6.0: {}
 
+  mime@2.6.0: {}
+
   mimic-fn@2.1.0: {}
 
   minimatch@3.1.2:
@@ -11360,6 +11517,10 @@ snapshots:
 
   prettier@3.3.3: {}
 
+  pretty-cache-header@1.0.0:
+    dependencies:
+      timestring: 6.0.0
+
   pretty-ms@7.0.1:
     dependencies:
       parse-ms: 2.1.0
@@ -11521,6 +11682,16 @@ snapshots:
       "@types/mdast": 3.0.15
       mdast-util-to-hast: 12.3.0
       unified: 10.1.2
+
+  remix-hono@0.0.16(@remix-run/cloudflare@2.13.1(@cloudflare/workers-types@4.20241018.0)(typescript@5.6.3))(typescript@5.6.3):
+    dependencies:
+      "@remix-run/server-runtime": 2.13.1(typescript@5.6.3)
+      hono: 4.6.5
+      pretty-cache-header: 1.0.0
+    optionalDependencies:
+      "@remix-run/cloudflare": 2.13.1(@cloudflare/workers-types@4.20241018.0)(typescript@5.6.3)
+    transitivePeerDependencies:
+      - typescript
 
   require-directory@2.1.1: {}
 
@@ -11865,6 +12036,8 @@ snapshots:
       xtend: 4.0.2
 
   through@2.3.8: {}
+
+  timestring@6.0.0: {}
 
   tinyexec@0.3.1: {}
 
