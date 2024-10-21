@@ -24,8 +24,6 @@ export const reactConfigs = [
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access
 		rules: reactHooksPlugin.configs.recommended.rules,
 	},
-	// HACK: This is not type-compatible with `Config`.
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 	jsxA11yPlugin.flatConfigs.recommended,
 	{
 		files: ["**/*.{js,jsx,ts,tsx}"],
