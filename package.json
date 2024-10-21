@@ -1,5 +1,5 @@
 {
-	"name": "rbs-cust-poc",
+	"name": "remix-hono-poc",
 	"private": true,
 	"sideEffects": false,
 	"type": "module",
