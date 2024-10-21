@@ -5,14 +5,14 @@ import globals from "globals";
  * @type {import("eslint").Linter.Config[]}
  */
 export const nodeConfigs = [
-  {
-    files: [
-      "eslint.config.js",
-      "eslint.config.*.js",
-      "panda.config.ts",
-      "postcss.config.js",
-      "vite.config.ts",
-    ],
-    languageOptions: { globals: { ...globals.node } },
-  },
+	{
+		files: [
+			"eslint.config.js",
+			"eslint.config.*.js",
+			"panda.config.ts",
+			"postcss.config.js",
+			"vite.config.ts",
+		],
+		languageOptions: { globals: { ...globals.node } },
+	},
 ];
