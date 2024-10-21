@@ -29,12 +29,22 @@ export const importConfigs = [
 					pathGroups: [
 						{
 							group: "builtin",
+							pattern: "vite?(-*){,/**}",
+							position: "after",
+						},
+						{
+							group: "builtin",
 							pattern: "react?(-*){,/**}",
 							position: "after",
 						},
 						{
 							group: "builtin",
 							pattern: "@remix-run/**",
+							position: "after",
+						},
+						{
+							group: "builtin",
+							pattern: "hono?(-*){,/**}",
 							position: "after",
 						},
 						{
