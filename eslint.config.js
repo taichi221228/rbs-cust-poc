@@ -5,6 +5,7 @@ import { config as defineConfig, configs } from "typescript-eslint";
 
 import { importConfigs } from "./eslint.config.import.js";
 import { nodeConfigs } from "./eslint.config.node.js";
+import { pandaConfigs } from "./eslint.config.panda.js";
 import { reactConfigs } from "./eslint.config.react.js";
 
 const ignoreConfig = createGitignoreConfig();
@@ -55,4 +56,5 @@ export default defineConfig(
 	...importConfigs,
 	...nodeConfigs,
 	...reactConfigs,
+	...pandaConfigs,
 );
