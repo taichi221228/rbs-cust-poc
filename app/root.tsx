@@ -10,6 +10,8 @@ import {
 
 import styles from "~/index.css?url";
 
+import "@fontsource-variable/josefin-sans";
+
 /** @private */
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
