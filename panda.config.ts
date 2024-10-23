@@ -6,7 +6,7 @@ import { tokens, semanticTokens } from "./panda.config.tokens";
 export default defineConfig({
 	strictTokens: true,
 	preflight: true,
-	include: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
+	include: ["./app/**/*.{js,jsx,ts,tsx}"],
 	exclude: [],
 	theme: { tokens, semanticTokens },
 	outdir: "styled-system",
