@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      "@fontsource-variable/josefin-sans":
+        specifier: ^5.1.0
+        version: 5.1.0
       "@remix-run/node":
         specifier: ^2.13.1
         version: 2.13.1(typescript@5.6.3)
@@ -1322,6 +1325,12 @@ packages:
         integrity: sha512-eohesHH8WFRUprDNyEREgqP6beG6htMeUYeCpkEgBCieCMme5r9zFWjzAJp//9S+Kub4rqE+jXe9Cp1a7IYIIA==,
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
+
+  "@fontsource-variable/josefin-sans@5.1.0":
+    resolution:
+      {
+        integrity: sha512-QePgC0aZAm/Xlc0/3w7BKxNqAIIlqRmatbOEPGVy4fqX16f32q154ipM7lKc48Rm4xjVWre+6ZkEIkZYRy3erQ==,
+      }
 
   "@hono/node-server@1.13.2":
     resolution:
@@ -8139,6 +8148,8 @@ snapshots:
   "@eslint/js@8.57.1": {}
 
   "@eslint/js@9.12.0": {}
+
+  "@fontsource-variable/josefin-sans@5.1.0": {}
 
   "@hono/node-server@1.13.2(hono@4.6.5)":
     dependencies:
