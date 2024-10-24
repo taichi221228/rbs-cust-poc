@@ -1,9 +1,9 @@
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 import reactPlugin from "eslint-plugin-react";
-// HACK: `@types/eslint-plugin-react-hooks` is not found
+// TODO: Type definition is not found
 // @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment
 import reactHooksPlugin from "eslint-plugin-react-hooks";
-// HACK: `@types/eslint-plugin-react-refresh` is not found
+// TODO: Type definition is not found
 // @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment
 import reactRefreshPlugin from "eslint-plugin-react-refresh";
 
