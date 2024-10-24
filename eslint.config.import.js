@@ -1,5 +1,5 @@
-/* HACK: `@types/eslint-plugin-import` is not found
- * @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment */
+// HACK: `@types/eslint-plugin-import` is not found
+// @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment
 import importPlugin from "eslint-plugin-import";
 import importAccessPlugin from "eslint-plugin-import-access/flat-config";
 
