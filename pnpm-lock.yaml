@@ -73,7 +73,7 @@ importers:
         version: 18.3.1
       autoprefixer:
         specifier: ^10.4.19
-        version: 10.4.20(postcss@8.4.47)
+        version: 10.4.20(postcss@8.4.38)
       better-typescript-lib:
         specifier: ^2.9.0
         version: 2.9.0(typescript@5.6.3)
@@ -101,6 +101,9 @@ importers:
       eslint-plugin-react-hooks:
         specifier: ^4.6.0
         version: 4.6.2(eslint@9.13.0(jiti@1.21.6))
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.13
+        version: 0.4.13(eslint@9.13.0(jiti@1.21.6))
       globals:
         specifier: ^15.11.0
         version: 15.11.0
@@ -109,7 +112,7 @@ importers:
         version: 9.1.6
       postcss-load-config:
         specifier: ^6.0.1
-        version: 6.0.1(jiti@1.21.6)(postcss@8.4.47)(yaml@2.6.0)
+        version: 6.0.1(jiti@1.21.6)(postcss@8.4.38)(yaml@2.6.0)
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -3586,6 +3589,14 @@ packages:
     engines: { node: ">=10" }
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
+
+  eslint-plugin-react-refresh@0.4.13:
+    resolution:
+      {
+        integrity: sha512-f1EppwrpJRWmqDTyvAyomFVDYRtrS7iTEqv3nokETnMiMzs2SSTmKRTACce4O2p4jYyowiSMvpdwC/RLcMFhuQ==,
+      }
+    peerDependencies:
+      eslint: ">=7"
 
   eslint-plugin-react@7.37.2:
     resolution:
@@ -9663,14 +9674,14 @@ snapshots:
 
   astring@1.9.0: {}
 
-  autoprefixer@10.4.20(postcss@8.4.47):
+  autoprefixer@10.4.20(postcss@8.4.38):
     dependencies:
       browserslist: 4.24.2
       caniuse-lite: 1.0.30001669
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
-      postcss: 8.4.47
+      postcss: 8.4.38
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
@@ -10414,6 +10425,10 @@ snapshots:
       string.prototype.includes: 2.0.1
 
   eslint-plugin-react-hooks@4.6.2(eslint@9.13.0(jiti@1.21.6)):
+    dependencies:
+      eslint: 9.13.0(jiti@1.21.6)
+
+  eslint-plugin-react-refresh@0.4.13(eslint@9.13.0(jiti@1.21.6)):
     dependencies:
       eslint: 9.13.0(jiti@1.21.6)
 
@@ -12070,12 +12085,12 @@ snapshots:
     optionalDependencies:
       postcss: 8.4.47
 
-  postcss-load-config@6.0.1(jiti@1.21.6)(postcss@8.4.47)(yaml@2.6.0):
+  postcss-load-config@6.0.1(jiti@1.21.6)(postcss@8.4.38)(yaml@2.6.0):
     dependencies:
       lilconfig: 3.1.2
     optionalDependencies:
       jiti: 1.21.6
-      postcss: 8.4.47
+      postcss: 8.4.38
       yaml: 2.6.0
 
   postcss-merge-rules@7.0.0(postcss@8.4.38):
