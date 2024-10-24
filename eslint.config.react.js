@@ -3,6 +3,9 @@ import reactPlugin from "eslint-plugin-react";
 // HACK: `@types/eslint-plugin-react-hooks` is not found
 // @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment
 import reactHooksPlugin from "eslint-plugin-react-hooks";
+// HACK: `@types/eslint-plugin-react-refresh` is not found
+// @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment
+import reactRefreshPlugin from "eslint-plugin-react-refresh";
 
 /**
  * @package
@@ -23,6 +26,29 @@ export const reactConfigs = [
 		// HACK: This is not type-compatible with `Config`.
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access
 		rules: reactHooksPlugin.configs.recommended.rules,
+	},
+	{
+		// HACK: This is not type-compatible with `Config`.
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+		plugins: { "react-refresh": reactRefreshPlugin },
+		rules: {
+			"react-refresh/only-export-components": [
+				"warn",
+				{
+					allowExportNames: [
+						"loader",
+						"clientLoader",
+						"action",
+						"clientAction",
+						"headers",
+						"links",
+						"meta",
+						"handle",
+						"shouldRevalidate",
+					],
+				},
+			],
+		},
 	},
 	jsxA11yPlugin.flatConfigs.recommended,
 	{
