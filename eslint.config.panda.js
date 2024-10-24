@@ -9,10 +9,10 @@ import pandaPlugin from "@pandacss/eslint-plugin";
  */
 export const pandaConfigs = [
 	{
-		// XXX: This is not type-compatible with `Config`.
+		// WARNING: This is not type-compatible with `Config`.
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		plugins: { "@pandacss": pandaPlugin },
-		// XXX: This is not type-compatible with `Config`.
+		// WARNING: This is not type-compatible with `Config`.
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access
 		rules: pandaPlugin.configs.recommended.rules,
 	},
