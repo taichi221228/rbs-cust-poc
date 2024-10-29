@@ -1,5 +1,5 @@
 import eslint from "@eslint/js";
-import createGitignoreConfig from "eslint-config-flat-gitignore";
+import createIgnoreConfig from "eslint-config-flat-gitignore";
 import globals from "globals";
 import { config as defineConfig, configs } from "typescript-eslint";
 
@@ -9,7 +9,7 @@ import { nodeConfigs } from "./eslint.config.node.js";
 // import { pandaConfigs } from "./eslint.config.panda.js";
 import { reactConfigs } from "./eslint.config.react.js";
 
-const ignoreConfig = createGitignoreConfig();
+const ignoreConfig = createIgnoreConfig();
 
 /** @type import("eslint").Linter.Config */
 const jsConfig = {
