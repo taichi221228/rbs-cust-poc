@@ -34,7 +34,10 @@
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 		"baseUrl": ".",
-		"paths": { "~/*": ["app/*"] },
+		"paths": {
+			"~/*": ["app/*"],
+			"styled-system/*": ["app/styled-system/*"]
+		},
 		"noEmit": true
 	}
 }
