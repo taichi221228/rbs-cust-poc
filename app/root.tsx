@@ -8,12 +8,12 @@ import {
 	ScrollRestoration,
 } from "@remix-run/react";
 
-import styles from "~/style.css?url";
+import style from "~/style.css?url";
 
 import "@fontsource-variable/josefin-sans";
 
 /** @private */
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: style }];
 
 /** @private */
 export function Layout({ children }: { children: ReactNode }) {
