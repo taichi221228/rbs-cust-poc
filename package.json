@@ -9,8 +9,8 @@
 		"start": "remix-serve ./build/server/index.js",
 		"lint": "bunx --bun eslint --cache --cache-location ./node_modules/.cache/eslint .",
 		"lint.fix": "bunx --bun eslint --cache --cache-location ./node_modules/.cache/eslint . --fix",
-		"format": "bunx --bun prettier --ignore-path .gitignore . --write",
-		"format.check": "bunx --bun prettier --ignore-path .gitignore . --check",
+		"format": "bunx --bun prettier . --write",
+		"format.check": "bunx --bun prettier . --check",
 		"typecheck": "bunx --bun tsc",
 		"prepare": "(bunx --bun husky) & panda codegen"
 	},
