@@ -1,3 +1,5 @@
+import "@fontsource-variable/josefin-sans";
+
 import type { ReactNode } from "react";
 import type { LinksFunction } from "@remix-run/node";
 import {
@@ -9,8 +11,6 @@ import {
 } from "@remix-run/react";
 
 import style from "~/style.css?url";
-
-import "@fontsource-variable/josefin-sans";
 
 /** @private */
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: style }];
