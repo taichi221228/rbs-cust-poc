@@ -9,5 +9,5 @@ export default defineConfig({
 	include: ["./app/**/*.{js,jsx,ts,tsx}"],
 	exclude: [],
 	theme: { tokens, semanticTokens },
-	outdir: "styled-system",
+	outdir: "app/styled-system",
 });
