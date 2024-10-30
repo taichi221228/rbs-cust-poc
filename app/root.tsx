@@ -8,7 +8,7 @@ import {
 	ScrollRestoration,
 } from "@remix-run/react";
 
-import styles from "~/index.css?url";
+import styles from "~/style.css?url";
 
 import "@fontsource-variable/josefin-sans";
 
