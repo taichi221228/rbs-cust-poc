@@ -8,6 +8,16 @@ export const tokens = defineTokens({
 /** @package */
 export const semanticTokens = defineSemanticTokens({
 	fonts: {
-		primary: { value: "{fonts.josefin}" },
+		primary: { value: ["{fonts.josefin}", "{fonts.fallback}"] },
+		fallback: {
+			value: [
+				'"Helvetica Neue"',
+				"arial",
+				'"Hiragino Kaku Gothic ProN"',
+				'"Hiragino Sans"',
+				"meiryo",
+				"sans-serif",
+			],
+		},
 	},
 });
