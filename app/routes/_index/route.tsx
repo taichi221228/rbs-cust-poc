@@ -9,6 +9,6 @@ export const meta: MetaFunction = () => {
 };
 
 /** @private */
-export default function Index() {
+export default function Route() {
 	return <h1>Top Page</h1>;
 }
