@@ -6,4 +6,8 @@ export const tokens = defineTokens({
 });
 
 /** @package */
-export const semanticTokens = defineSemanticTokens({});
+export const semanticTokens = defineSemanticTokens({
+	fonts: {
+		primary: { value: "{fonts.josefin}" },
+	},
+});
