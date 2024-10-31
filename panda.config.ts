@@ -4,6 +4,7 @@ import { tokens, semanticTokens } from "./panda.config.tokens";
 
 /** @private */
 export default defineConfig({
+	jsxFramework: "react",
 	strictTokens: true,
 	preflight: true,
 	include: ["app/**/*.{js,jsx,ts,tsx}"],
