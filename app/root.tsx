@@ -20,7 +20,15 @@ export const links: LinksFunction = () => [{ rel: "stylesheet", href: style }];
 /** @private */
 export function Layout({ children }: { children: ReactNode }) {
 	return (
-		<html className={css({ fontFamily: "primary" })} lang="en">
+		<html
+			className={css({
+				fontFamily: "primary",
+				fontSize: "body",
+				color: "primary",
+				backgroundColor: "primary.alternative",
+			})}
+			lang="en"
+		>
 			<head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
