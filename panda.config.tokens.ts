@@ -3,6 +3,16 @@ import { defineSemanticTokens, defineTokens } from "@pandacss/dev";
 /** @package */
 export const tokens = defineTokens({
 	fonts: { josefin: { value: '"Josefin Sans Variable"' } },
+	colors: {
+		gray: {
+			50: { value: "hsl(233, 11%, 95%)" },
+			200: { value: "hsl(233, 11%, 80%)" },
+			350: { value: "hsl(233, 11%, 65%)" },
+			500: { value: "hsl(233, 11%, 50%)" },
+			650: { value: "hsl(233, 11%, 35%)" },
+			800: { value: "hsl(233, 11%, 20%)" },
+		},
+	},
 });
 
 /** @package */
