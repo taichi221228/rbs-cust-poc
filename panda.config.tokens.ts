@@ -30,4 +30,14 @@ export const semanticTokens = defineSemanticTokens({
 			],
 		},
 	},
+	colors: {
+		primary: {
+			DEFAULT: {
+				value: { base: "{colors.gray.650}", _osDark: "{colors.gray.350}" },
+			},
+			alternative: {
+				value: { base: "{colors.gray.50}", _osDark: "{colors.gray.800}" },
+			},
+		},
+	},
 });
