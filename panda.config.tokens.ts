@@ -30,6 +30,10 @@ export const semanticTokens = defineSemanticTokens({
 			],
 		},
 	},
+	fontSizes: {
+		body: { value: "18px" },
+		headline: { value: "36px" },
+	},
 	colors: {
 		primary: {
 			DEFAULT: {
