@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
-import { vitePlugin as remix } from "@remix-run/dev";
-import serverAdapter from "hono-remix-adapter/vite";
+import resolveTsconfigPlugin from "vite-tsconfig-paths";
+import { vitePlugin as resolveRemixPlugin } from "@remix-run/dev";
+import resolveHonoPlugin from "hono-remix-adapter/vite";
 
 declare module "@remix-run/node" {
 	interface Future {
@@ -12,7 +12,7 @@ declare module "@remix-run/node" {
 /** @private */
 export default defineConfig({
 	plugins: [
-		remix({
+		resolveRemixPlugin({
 			future: {
 				v3_fetcherPersist: true,
 				v3_relativeSplatPath: true,
@@ -21,7 +21,7 @@ export default defineConfig({
 				v3_lazyRouteDiscovery: true,
 			},
 		}),
-		serverAdapter({ entry: "server.ts" }),
-		tsconfigPaths(),
+		resolveHonoPlugin({ entry: "server.ts" }),
+		resolveTsconfigPlugin(),
 	],
 });
