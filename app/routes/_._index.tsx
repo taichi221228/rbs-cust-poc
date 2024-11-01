@@ -1,4 +1,8 @@
-import type { MetaFunction } from "@remix-run/node";
+import {
+	type LoaderFunction,
+	type MetaFunction,
+	redirect,
+} from "@remix-run/node";
 
 /** @private */
 export const meta: MetaFunction = () => {
@@ -9,6 +13,6 @@ export const meta: MetaFunction = () => {
 };
 
 /** @private */
-export default function Route() {
-	return <h1>Top Page</h1>;
-}
+export const loader: LoaderFunction = () => {
+	return redirect("/todo");
+};
