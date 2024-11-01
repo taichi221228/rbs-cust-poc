@@ -10,5 +10,5 @@ export default defineConfig({
 	include: ["app/**/*.{js,jsx,ts,tsx}"],
 	exclude: [],
 	theme: { tokens, semanticTokens },
-	outdir: "app/styled-system",
+	outdir: "app/registries/styled-system",
 });
