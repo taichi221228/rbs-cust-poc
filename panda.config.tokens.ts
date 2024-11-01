@@ -44,4 +44,7 @@ export const semanticTokens = defineSemanticTokens({
 			},
 		},
 	},
+	sizes: {
+		content: { value: "540px" },
+	},
 });
