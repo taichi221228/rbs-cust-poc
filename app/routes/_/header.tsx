@@ -1,3 +1,5 @@
+import { css } from "styled-system/css";
+
 import { useHeadline } from "~/hooks/use-headline";
 
 /** @package */
@@ -6,7 +8,7 @@ export function Header() {
 
 	return (
 		<header>
-			<h1>{headline}</h1>
+			<h1 className={css({ fontSize: "headline" })}>{headline}</h1>
 		</header>
 	);
 }
