@@ -36,7 +36,8 @@
 		"baseUrl": ".",
 		"paths": {
 			"~/*": ["app/*"],
-			"styled-system/*": ["app/registries/styled-system/*"]
+			"styled-system/*": ["app/registries/styled-system/*"],
+			"styled-components/*": ["app/registries/styled-components/*"]
 		},
 		"noEmit": true
 	}
