@@ -55,6 +55,11 @@ export const importConfigs = [
 							position: "before",
 						},
 						{
+							group: "external",
+							pattern: "styled-components/**",
+							position: "before",
+						},
+						{
 							group: "internal",
 							pattern: "~/constants/**",
 							position: "before",
