@@ -9,7 +9,7 @@ import { nodeConfigs } from "./eslint.config.node.js";
 // import { pandaConfigs } from "./eslint.config.panda.js";
 import { reactConfigs } from "./eslint.config.react.js";
 
-const ignoreConfig = createIgnoreConfig();
+const ignoreConfigs = [createIgnoreConfig(), { ignores: ["app/registries/"] }];
 
 /** @type import("eslint").Linter.Config */
 const jsConfig = {
@@ -50,7 +50,7 @@ const basicConfig = {
 // FIXME: Suppress TypeScript errors due to incompatibility between `eslint-plugin-import-access` and `tsc` when using `checkJS`.
 // @ts-expect-error eslint-disable-line @typescript-eslint/ban-ts-comment
 export default defineConfig(
-	ignoreConfig,
+	...ignoreConfigs,
 	jsConfig,
 	...tsConfigs,
 	basicConfig,
