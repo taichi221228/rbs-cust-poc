@@ -15,7 +15,7 @@
 		"**/*.jsx",
 		"**/*.tsx"
 	],
-	"exclude": ["build/", "app/registries/"],
+	"exclude": ["build/", "app/registries/styled-system/"],
 	"compilerOptions": {
 		"lib": ["DOM", "DOM.Iterable", "ES2022"],
 		"types": ["@remix-run/node", "vite/client"],
@@ -36,8 +36,7 @@
 		"baseUrl": ".",
 		"paths": {
 			"~/*": ["app/*"],
-			"styled-system/*": ["app/registries/styled-system/*"],
-			"styled-components/*": ["app/registries/styled-components/*"]
+			"styled-system/*": ["app/registries/styled-system/*"]
 		},
 		"noEmit": true
 	}
