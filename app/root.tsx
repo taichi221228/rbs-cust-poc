@@ -23,7 +23,6 @@ export function Layout({ children }: { children: ReactNode }) {
 		<html
 			className={css({
 				fontFamily: "primary",
-				fontSize: "body",
 				color: "primary",
 				backgroundColor: "primary.alternative",
 			})}
