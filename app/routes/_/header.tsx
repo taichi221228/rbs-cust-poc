@@ -8,7 +8,7 @@ export function Header() {
 
 	return (
 		<header>
-			<h1 className={css({ fontSize: "headline" })}>{headline}</h1>
+			<h1 className={css({ fontSize: "4xl" })}>{headline}</h1>
 		</header>
 	);
 }
