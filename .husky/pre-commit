@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
 
-pnpm typecheck
-pnpm lint
-pnpm format.check
+mise x -- pnpm typecheck
+mise x -- pnpm lint
+mise x -- pnpm format.check

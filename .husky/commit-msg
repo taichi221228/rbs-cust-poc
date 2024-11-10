@@ -1,3 +1,3 @@
 #!/usr/bin/env zsh
 
-bunx --bun commitlint --edit $1
+mise x -- bunx --bun commitlint --edit $1
